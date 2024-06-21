@@ -1,8 +1,8 @@
 {
-    "name": "Cyber-X WhatsApp Bot",
-    "description": "This is a 3ʳᵈ Party Application software for WhatsApp with Many Feature & many Commands",
-    "repository": "https://github.com/Tamoom/CYBER-X-WHATSAPP-BOT",
-    "logo": "https://telegra.ph/file/71c859102f3625d06204b.jpg",
+    "name": "TAIFUR-X 2.0",
+    "description": "ᴛᴀɪꜰᴜʀ-x ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
+    "repository": "https://github.com/Itxtaifur/TAIFUR-X-WHATSAPP-BOT",
+    "logo": "https://telegra.ph/file/a4477f85294cf81b725eb.jpg",
     "keywords": [
         "nodejs",
         "Bot",
@@ -13,11 +13,16 @@
     "env": {
         "SESSION_ID": {
             "description": "Type the Session-ID you got from scaning QR",
-            "required": true,
+            "required": false,
             "value": ""
         },
+        "DATABASE_URL": {
+            "description": "Enter a PostgresSQL Database's External Url",
+            "required": true,
+            "value": "postgres://ue98urrqjftigo:p5f9c10ccd29fa6ec2096758639ddb6898a04ed3f1008ea2b1b280b3aa11e9952@caij57unh724n3.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d3781dkaju05oq"
+        },
         "HEROKU_API_KEY": {
-            "description": "Enter your heroku account api key",
+            "description": "Enter your Heroku account Api key",
             "required": true,
             "value": ""
         },
@@ -27,28 +32,20 @@
             "value": ""
         },
         "WORK_TYPE": {
-            "description": "Add the worktype of the Bot ( private , public , only_group )",
+            "description": "Add the worktype of the Bot ( private ,public , onlygroup )",
             "required": true,
             "value": "private"
         }
     },
     "buildpacks": [
         {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+            "url": "heroku/nodejs"
         },
         {
             "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
         },
         {
             "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-        }
-    ],
-    "addons": [
-        {
-            "plan": "heroku-postgresql",
-            "options": {
-                "version": "13"
-            }
         }
     ],
     "formation": {
